@@ -11,8 +11,6 @@ vim.wo.relativenumber = true
 vim.wo.cursorline = true
 -- 显示左侧图标指示列
 vim.wo.signcolumn = "yes"
--- 右侧参考线, 超过表示代码太长，考虑换行
-vim.wo.colorcolumn = "80"
 -- 缩进4个空格等于一个 tab
 vim.o.tabstop = 4
 vim.bo.tabstop = 4
@@ -28,6 +26,7 @@ vim.bo.expandtab = true
 vim.bo.autoindent = true
 vim.o.smartindent = true
 -- 边输入边搜索
+vim.o.hlsearch = false
 vim.o.incsearch = true
 -- 命令行高为 2，提供足够的显示空间
 vim.o.cmdheight = 2

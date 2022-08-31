@@ -40,7 +40,9 @@ packer.startup(
                 'nvim-lualine/lualine.nvim',
                 requires = { 'kyazdani42/nvim-web-devicons', opt = true }
             }
-            use "yorik1984/lualine-theme.nvim"
+            use 'kyazdani42/nvim-web-devicons'
+            -- use 'lambdalisue/nerdfont.vim'
+
             -- tab 文件列表
             use {
                 'akinsho/bufferline.nvim',

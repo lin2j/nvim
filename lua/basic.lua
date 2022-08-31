@@ -11,17 +11,18 @@ vim.wo.relativenumber = true
 vim.wo.cursorline = true
 -- 显示左侧图标指示列
 vim.wo.signcolumn = "yes"
+-- 空格替代 tab
+vim.o.expandtab = true
+vim.bo.expandtab = true
 -- 缩进4个空格等于一个 tab
 vim.o.tabstop = 4
+vim.o.shiftwidth = 4
 vim.bo.tabstop = 4
 vim.o.softtabstop = 4
 vim.o.shiftround = true
 -- << >> 时移动的长度
-vim.o.shiftwidth = 2
-vim.bo.shiftwidth = 2
--- 空格替代 tab
-vim.o.expandtab = true
-vim.bo.expandtab = true
+-- vim.o.shiftwidth = 2
+-- vim.bo.shiftwidth = 2
 -- 新行对齐当前行 vim.o.autoindent = true
 vim.bo.autoindent = true
 vim.o.smartindent = true

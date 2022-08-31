@@ -49,6 +49,11 @@ packer.startup(
                 tag = "v2.*", 
                 requires = 'kyazdani42/nvim-web-devicons'
             }
+            -- 彩虹括号
+            -- use 'p00f/nvim-ts-rainbow'
+            -- 注释代码
+            use 'tpope/vim-commentary'
+            
             
             if packer_bootstrap then
                 packer.sync()

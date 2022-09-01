@@ -3,6 +3,45 @@ local opt = {
   silent = true,
 }
 local pluginKeys = {}
+local map = vim.api.nvim_set_keymap
+
+-- nvim-tree 快捷键
+map('n', '<leader>1', ':NvimTreeToggle <CR>', opt)
+map('n', '<leader>2', ':NvimTreeFocus <CR>', opt)
+map('n', '<leader>mr', ':NvimTreeRefresh <CR>', opt)
+map('n', '<leader>mf', ':NvimTreeFindFile <CR>', opt)
+map('n', 'cto', ':NvimTreeOpen <CR>', opt)
+pluginKeys.nvimTreeList = {
+    -- 打开文件或文件夹
+    {key = {'<CR>', 'o', '<2-LeftMouse>'}, action = 'edit'},
+    -- v分屏打开文件
+    {key = 'v', action = 'vsplit'},
+    -- h分屏打开文件
+    {key = 'h', action = 'split'},
+    -- Ignore (node_modules)
+    {key = 'i', action = 'toggle_ignored'},
+    -- Hide (dotfiles)
+    {key = '.', action = 'toggle_dotfiles'},
+    {key = 'R', action = 'refresh'},
+    -- 文件操作
+    {key = 'a', action = 'create'},
+    {key = 'd', action = 'remove'},
+    {key = 'r', action = 'rename'},
+    {key = 'x', action = 'cut'},
+    {key = 'c', action = 'copy'},
+    {key = 'p', action = 'paste'},
+    {key = 'y', action = 'copy_name'},
+    {key = 'Y', action = 'copy_path'},
+    {key = 'gy', action = 'copy_absolute_path'},
+    {key = 'I', action = 'toggle_file_info'},
+    {key = 'n', action = 'tabnew'},
+    -- 进入下一级
+    {key = {']'}, action = 'cd'},
+    -- 进入上一级
+    {key = {'['}, action = 'dir_up'},
+    {key = 's', action = 'system_open'}
+}
+
 
 -- lsp 回调函数快捷键设置
 pluginKeys.maplsp = function(mapbuf)
@@ -12,6 +51,9 @@ pluginKeys.maplsp = function(mapbuf)
   mapbuf('n', '<space>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', opt)
   -- go xx
   mapbuf('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opt)
+  mapbuf('n', '<C-b>', '<cmd>lua vim.lsp.buf.definition()<CR>', opt)
+  mapbuf('n', '<D-b>', '<cmd>lua vim.lsp.buf.definition()<CR>', opt)
+
   mapbuf('n', 'gh', '<cmd>lua vim.lsp.buf.hover()<CR>', opt)
   mapbuf('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>', opt)
   mapbuf('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opt)

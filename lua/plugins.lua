@@ -69,6 +69,9 @@ packer.startup(
             -- lspkind
             use 'onsails/lspkind-nvim'
 
+            -- 目录树
+            use({'kyazdani42/nvim-tree.lua',requires = 'kyazdani42/nvim-web-devicons'}
+)
 
             if packer_bootstrap then
                 packer.sync()

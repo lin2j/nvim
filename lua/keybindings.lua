@@ -1,9 +1,29 @@
+-- leader 为 ' '
+vim.g.mapleader = ' '
+
 local opt = {
   noremap = true,
   silent = true,
 }
 local pluginKeys = {}
 local map = vim.api.nvim_set_keymap
+
+-- Telescope
+-- map("n", "<C-p>", ":Telescope find_files<CR>", opt)
+-- map("n", "<C-f>", ":Telescope live_grep<CR>", opt)
+--
+map("n", "<leader>fm", ":Telescope marks <CR>", opt)
+map("n", "<leader>fb", ":Telescope buffers <CR>", opt)
+map("n", "<leader>ff", ":Telescope find_files <CR>", opt)
+map("n", "<leader>fa", ":Telescope find_files follow=true no_ignore=true hidden=true <CR>", opt)
+map("n", "<leader>cm", ":Telescope git_commits <CR>", opt)
+map("n", "<leader>gt", ":Telescope git_status <CR>", opt)
+map("n", "<leader>fh", ":Telescope help_tags <CR>", opt)
+map("n", "<leader>fw", ":Telescope live_grep <CR>", opt)
+map("n", "<leader>fo", ":Telescope oldfiles <CR>", opt)
+map("n", "<leader>fp", ":Telescope projects<CR>", opt)
+map("n", "<leader>th", ":Telescope themes <CR>", opt)
+map("n", "<leader>3", "<cmd>Vista!!<CR>", opt)
 
 -- nvim-tree 快捷键
 map('n', '<leader>1', ':NvimTreeToggle <CR>', opt)

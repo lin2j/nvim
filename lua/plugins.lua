@@ -78,6 +78,13 @@ packer.startup(
             -- code outline 函数列表
             use 'stevearc/aerial.nvim'
 
+            -- fuzzy search file
+            use {
+                'nvim-telescope/telescope.nvim', tag = '0.1.0',
+                requires = { {'nvim-lua/plenary.nvim'}}
+            }
+            use 'nvim-treesitter/nvim-treesitter'
+
             if packer_bootstrap then
                 packer.sync()
             end

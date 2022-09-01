@@ -11,7 +11,7 @@ if fn.empty(fn.glob(install_path)) > 0 then
         {
             'git',
             'clone',
-            '--depth', '1', 
+            '--depth', '1',
             'https://github.com/wbthomason/packer.nvim',
             install_path
         }
@@ -46,15 +46,30 @@ packer.startup(
             -- tab 文件列表
             use {
                 'akinsho/bufferline.nvim',
-                tag = "v2.*", 
+                tag = "v2.*",
                 requires = 'kyazdani42/nvim-web-devicons'
             }
             -- 彩虹括号
             -- use 'p00f/nvim-ts-rainbow'
             -- 注释代码
             use 'tpope/vim-commentary'
-            
-            
+            -- 代码提示与补全
+            use 'neovim/nvim-lspconfig'
+            use 'williamboman/nvim-lsp-installer'
+            -- nvim-cmp
+            use 'hrsh7th/cmp-nvim-lsp' -- { name = nvim_lsp }
+            use 'hrsh7th/cmp-buffer'   -- { name = 'buffer' },
+            use 'hrsh7th/cmp-path'     -- { name = 'path' }
+            use 'hrsh7th/cmp-cmdline'  -- { name = 'cmdline' }
+            use 'hrsh7th/nvim-cmp'
+            -- vsnip
+            use 'hrsh7th/cmp-vsnip'    -- { name = 'vsnip' }
+            use 'hrsh7th/vim-vsnip'
+            use 'rafamadriz/friendly-snippets'
+            -- lspkind
+            use 'onsails/lspkind-nvim'
+
+
             if packer_bootstrap then
                 packer.sync()
             end

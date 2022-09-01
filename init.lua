@@ -5,3 +5,7 @@ require("plugins")
 require('plugin-config.lualine')
 require('plugin-config.bufferline')
 
+-- 代码提示与补全
+require('lsp.setup')
+require('lsp.nvim-cmp')
+

@@ -42,6 +42,17 @@ pluginKeys.nvimTreeList = {
     {key = 's', action = 'system_open'}
 }
 
+-- aerial 函数/类列表快捷键
+pluginKeys.mapaerial = function(mapbuf)
+    -- Toggle the aerial window with <leader>a
+    mapbuf('n', '<leader>a', '<cmd>AerialToggle!<CR>', opt)
+    -- Jump forwards/backwards with '{' and '}'
+    mapbuf('n', '{', '<cmd>AerialPrev<CR>', opt)
+    mapbuf('n', '}', '<cmd>AerialNext<CR>', opt)
+    -- Jump up the tree with '[[' or ']]'
+    mapbuf('n', '[[', '<cmd>AerialPrevUp<CR>', opt)
+    mapbuf('n', ']]', '<cmd>AerialNextUp<CR>', opt)
+end
 
 -- lsp 回调函数快捷键设置
 pluginKeys.maplsp = function(mapbuf)
@@ -94,10 +105,16 @@ pluginKeys.cmp = function(cmp)
       select = true ,
       behavior = cmp.ConfirmBehavior.Replace
     }),
+    ['<CR>'] = cmp.mapping.confirm({
+      select = true ,
+      behavior = cmp.ConfirmBehavior.Replace
+    }),
     -- ['<C-y>'] = cmp.config.disable, -- Specify `cmp.config.disable` if you want to remove the default `<C-y>` mapping.
     ['<C-u>'] = cmp.mapping(cmp.mapping.scroll_docs(-4), { 'i', 'c' }),
     ['<C-d>'] = cmp.mapping(cmp.mapping.scroll_docs(4), { 'i', 'c' }),
   }
 end
+
+
 
 return pluginKeys

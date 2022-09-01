@@ -85,6 +85,9 @@ packer.startup(
             }
             use 'nvim-treesitter/nvim-treesitter'
 
+            -- startup screen
+            use 'goolord/alpha-nvim'
+
             if packer_bootstrap then
                 packer.sync()
             end

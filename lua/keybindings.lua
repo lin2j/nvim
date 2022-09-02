@@ -11,7 +11,6 @@ local map = vim.api.nvim_set_keymap
 -- Telescope
 -- map("n", "<C-p>", ":Telescope find_files<CR>", opt)
 -- map("n", "<C-f>", ":Telescope live_grep<CR>", opt)
---
 map("n", "<leader>fm", ":Telescope marks <CR>", opt)
 map("n", "<leader>fb", ":Telescope buffers <CR>", opt)
 map("n", "<leader>ff", ":Telescope find_files <CR>", opt)

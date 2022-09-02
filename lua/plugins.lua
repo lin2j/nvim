@@ -54,8 +54,14 @@ packer.startup(
             -- 注释代码
             use 'tpope/vim-commentary'
             -- 代码提示与补全
-            use 'neovim/nvim-lspconfig'
-            use 'williamboman/nvim-lsp-installer'
+            use {
+                -- For Unix systems: git(1), curl(1) or wget(1), unzip(1), tar(1), gzip(1)
+                -- For Windows systems: powershell, git, tar, and 7zip or peazip or archiver or winzip or WinRAR
+                "williamboman/mason.nvim",
+                "williamboman/mason-lspconfig.nvim",
+                "neovim/nvim-lspconfig",
+            }
+            -- use 'williamboman/nvim-lsp-installer'
             -- nvim-cmp
             use 'hrsh7th/cmp-nvim-lsp' -- { name = nvim_lsp }
             use 'hrsh7th/cmp-buffer'   -- { name = 'buffer' },
@@ -68,6 +74,8 @@ packer.startup(
             use 'rafamadriz/friendly-snippets'
             -- lspkind
             use 'onsails/lspkind-nvim'
+            -- clangd enhance
+            -- use 'p00f/clangd_extensions.nvim'
 
             -- 目录树
             use{

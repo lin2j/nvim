@@ -152,8 +152,9 @@ require("aerial").setup({
   -- Call this function when aerial attaches to a buffer.
   -- Useful for setting keymaps. Takes a single `bufnr` argument.
   on_attach = function(bufnr)
-      local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
-      require('keybindings').mapaerial(buf_set_keymap)
+    local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
+
+    require('keybindings').mapaerial(buf_set_keymap)
   end,
 
   -- Call this function when aerial first sets symbols on a buffer.
@@ -237,4 +238,3 @@ require("aerial").setup({
     update_delay = 300,
   },
 })
-

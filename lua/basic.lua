@@ -57,7 +57,7 @@ vim.g.completeopt = "menu,menuone,noselect,noinsert"
 vim.o.termguicolors = true
 vim.opt.termguicolors = true
 -- 是否显示不可见字符
-vim.o.list = false 
+vim.o.list = false
 -- 不可见字符的显示
 vim.o.listchars = "space:."
 -- 补全增强

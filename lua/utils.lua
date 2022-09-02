@@ -31,7 +31,6 @@ function M.get_nvim_version()
   return nvim_ver_str
 end
 
-
 --- Generate random integers in the range [Low, High], inclusive,
 --- adapted from https://stackoverflow.com/a/12739441/6064933
 --- @low: the lower value for this range
@@ -52,7 +51,7 @@ function M.rand_element(seq)
 end
 
 function M.add_pack(name)
-  local status, error = pcall(vim.cmd, "packadd " .. name)
+  local status, _ = pcall(vim.cmd, "packadd " .. name)
 
   return status
 end

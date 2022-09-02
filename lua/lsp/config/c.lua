@@ -5,7 +5,7 @@ return {
       threads = 0;
     };
     clang = {
-      excludeArgs = { "-frounding-math"} ;
+      excludeArgs = { "-frounding-math" };
     };
   }
 }

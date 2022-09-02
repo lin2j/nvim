@@ -8,6 +8,9 @@ local opt = {
 local pluginKeys = {}
 local map = vim.api.nvim_set_keymap
 
+-- 局部代码格式化
+map('v', 'cf', '<ESC><cmd>lua vim.lsp.buf.range_formatting()<CR>', opt)
+
 -- Telescope
 -- map("n", "<C-p>", ":Telescope find_files<CR>", opt)
 -- map("n", "<C-f>", ":Telescope live_grep<CR>", opt)
@@ -31,46 +34,46 @@ map('n', '<leader>mr', ':NvimTreeRefresh <CR>', opt)
 map('n', '<leader>mf', ':NvimTreeFindFile <CR>', opt)
 map('n', 'cto', ':NvimTreeOpen <CR>', opt)
 pluginKeys.nvimTreeList = {
-    -- 打开文件或文件夹
-    {key = {'<CR>', 'o', '<2-LeftMouse>'}, action = 'edit'},
-    -- v分屏打开文件
-    {key = 'v', action = 'vsplit'},
-    -- h分屏打开文件
-    {key = 'h', action = 'split'},
-    -- Ignore (node_modules)
-    {key = 'i', action = 'toggle_ignored'},
-    -- Hide (dotfiles)
-    {key = '.', action = 'toggle_dotfiles'},
-    {key = 'R', action = 'refresh'},
-    -- 文件操作
-    {key = 'a', action = 'create'},
-    {key = 'd', action = 'remove'},
-    {key = 'r', action = 'rename'},
-    {key = 'x', action = 'cut'},
-    {key = 'c', action = 'copy'},
-    {key = 'p', action = 'paste'},
-    {key = 'y', action = 'copy_name'},
-    {key = 'Y', action = 'copy_path'},
-    {key = 'gy', action = 'copy_absolute_path'},
-    {key = 'I', action = 'toggle_file_info'},
-    {key = 'n', action = 'tabnew'},
-    -- 进入下一级
-    {key = {']'}, action = 'cd'},
-    -- 进入上一级
-    {key = {'['}, action = 'dir_up'},
-    {key = 's', action = 'system_open'}
+  -- 打开文件或文件夹
+  { key = { '<CR>', 'o', '<2-LeftMouse>' }, action = 'edit' },
+  -- v分屏打开文件
+  { key = 'v', action = 'vsplit' },
+  -- h分屏打开文件
+  { key = 'h', action = 'split' },
+  -- Ignore (node_modules)
+  { key = 'i', action = 'toggle_ignored' },
+  -- Hide (dotfiles)
+  { key = '.', action = 'toggle_dotfiles' },
+  { key = 'R', action = 'refresh' },
+  -- 文件操作
+  { key = 'a', action = 'create' },
+  { key = 'd', action = 'remove' },
+  { key = 'r', action = 'rename' },
+  { key = 'x', action = 'cut' },
+  { key = 'c', action = 'copy' },
+  { key = 'p', action = 'paste' },
+  { key = 'y', action = 'copy_name' },
+  { key = 'Y', action = 'copy_path' },
+  { key = 'gy', action = 'copy_absolute_path' },
+  { key = 'I', action = 'toggle_file_info' },
+  { key = 'n', action = 'tabnew' },
+  -- 进入下一级
+  { key = { ']' }, action = 'cd' },
+  -- 进入上一级
+  { key = { '[' }, action = 'dir_up' },
+  { key = 's', action = 'system_open' }
 }
 
 -- aerial 函数/类列表快捷键
 pluginKeys.mapaerial = function(mapbuf)
-    -- Toggle the aerial window with <leader>a
-    mapbuf('n', '<leader>a', '<cmd>AerialToggle!<CR>', opt)
-    -- Jump forwards/backwards with '{' and '}'
-    mapbuf('n', '{', '<cmd>AerialPrev<CR>', opt)
-    mapbuf('n', '}', '<cmd>AerialNext<CR>', opt)
-    -- Jump up the tree with '[[' or ']]'
-    mapbuf('n', '[[', '<cmd>AerialPrevUp<CR>', opt)
-    mapbuf('n', ']]', '<cmd>AerialNextUp<CR>', opt)
+  -- Toggle the aerial window with <leader>a
+  mapbuf('n', '<leader>a', '<cmd>AerialToggle!<CR>', opt)
+  -- Jump forwards/backwards with '{' and '}'
+  mapbuf('n', '{', '<cmd>AerialPrev<CR>', opt)
+  mapbuf('n', '}', '<cmd>AerialNext<CR>', opt)
+  -- Jump up the tree with '[[' or ']]'
+  mapbuf('n', '[[', '<cmd>AerialPrevUp<CR>', opt)
+  mapbuf('n', ']]', '<cmd>AerialNextUp<CR>', opt)
 end
 
 -- lsp 回调函数快捷键设置
@@ -121,11 +124,11 @@ pluginKeys.cmp = function(cmp)
     -- Accept currently selected item. If none selected, `select` first item.
     -- Set `select` to `false` to only confirm explicitly selected items.
     ['<Tab>'] = cmp.mapping.confirm({
-      select = true ,
+      select = true,
       behavior = cmp.ConfirmBehavior.Replace
     }),
     ['<CR>'] = cmp.mapping.confirm({
-      select = true ,
+      select = true,
       behavior = cmp.ConfirmBehavior.Replace
     }),
     -- ['<C-y>'] = cmp.config.disable, -- Specify `cmp.config.disable` if you want to remove the default `<C-y>` mapping.

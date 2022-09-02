@@ -226,4 +226,3 @@ end
 
 -- Now don't forget to initialize lualine
 lualine.setup(config)
-

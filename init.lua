@@ -15,4 +15,3 @@ require('plugin-config.mason')
 -- 代码提示与补全
 require('lsp.setup')
 require('lsp.nvim-cmp')
-

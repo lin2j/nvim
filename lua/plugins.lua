@@ -98,7 +98,9 @@ packer.startup(
 
             -- themes
             use {
-              'Shatur/neovim-ayu'
+              'Shatur/neovim-ayu',
+              'MetriC-DT/balance-theme.nvim',
+              'rmehri01/onenord.nvim',
             }
 
             if packer_bootstrap then

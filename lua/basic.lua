@@ -54,8 +54,8 @@ vim.o.splitright = true
 -- 自动补全不自动选中
 vim.g.completeopt = "menu,menuone,noselect,noinsert"
 -- 样式
--- vim.o.termguicolors = true
--- vim.opt.termguicolors = true
+vim.o.termguicolors = true
+vim.opt.termguicolors = true
 -- 是否显示不可见字符
 vim.o.list = false 
 -- 不可见字符的显示

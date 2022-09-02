@@ -3,6 +3,7 @@ require("plugins")
 
 -- 插件的配置
 require('plugin-config.alpha')
+require('plugin-config.theme')
 require('plugin-config.lualine')
 require('plugin-config.bufferline')
 require('plugin-config.nvim-tree')
@@ -15,5 +16,3 @@ require('plugin-config.mason')
 require('lsp.setup')
 require('lsp.nvim-cmp')
 
--- 主题美化
-require('plugin-config.theme-ayu')

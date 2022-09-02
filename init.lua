@@ -15,3 +15,5 @@ require('plugin-config.mason')
 require('lsp.setup')
 require('lsp.nvim-cmp')
 
+-- 主题美化
+require('plugin-config.theme-ayu')

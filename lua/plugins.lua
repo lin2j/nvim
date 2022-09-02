@@ -96,6 +96,11 @@ packer.startup(
             -- startup screen
             use 'goolord/alpha-nvim'
 
+            -- themes
+            use {
+              'Shatur/neovim-ayu'
+            }
+
             if packer_bootstrap then
                 packer.sync()
             end

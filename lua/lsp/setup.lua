@@ -20,10 +20,11 @@ local lsp_flags = {
 }
 
 -- 自动安装 LanguageServers
-for name, _ in pairs(servers) do
+for name, opts in pairs(servers) do
   lsp_config[name].setup{
     on_attach = on_attach,
     flags = lsp_flags,
+    settings = opts.settings,
   }
 end
 

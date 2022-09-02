@@ -16,7 +16,16 @@ elseif theme == 'ayu' then
   ayu.colorscheme()
 elseif theme == 'onenord' then
   require('onenord').setup({
-    theme = 'light'
+    theme = 'light',
+    -- Style that is applied to various groups: see `highlight-args` for options
+    styles = {
+      comments = "italic",
+      strings = "NONE",
+      keywords = "NONE",
+      functions = "NONE",
+      variables = "NONE",
+      diagnostics = "underline",
+    },
   })
 elseif theme == 'none' then
 end

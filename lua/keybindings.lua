@@ -9,7 +9,8 @@ local pluginKeys = {}
 local map = vim.api.nvim_set_keymap
 
 -- 局部代码格式化
-map('v', 'cf', '<ESC><cmd>lua vim.lsp.buf.range_formatting()<CR>', opt)
+-- map('n', '<leader>cf', ':Format<CR>', opt)
+-- map('v', '<leader>cf', ':Format<CR>', opt)
 
 -- Telescope
 -- map("n", "<C-p>", ":Telescope find_files<CR>", opt)
@@ -32,7 +33,6 @@ map('n', '<leader>1', ':NvimTreeToggle <CR>', opt)
 map('n', '<leader>2', ':NvimTreeFocus <CR>', opt)
 map('n', '<leader>mr', ':NvimTreeRefresh <CR>', opt)
 map('n', '<leader>mf', ':NvimTreeFindFile <CR>', opt)
-map('n', 'cto', ':NvimTreeOpen <CR>', opt)
 pluginKeys.nvimTreeList = {
   -- 打开文件或文件夹
   { key = { '<CR>', 'o', '<2-LeftMouse>' }, action = 'edit' },

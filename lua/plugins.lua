@@ -51,6 +51,7 @@ packer.startup(
       }
       -- 彩虹括号
       -- use 'p00f/nvim-ts-rainbow'
+      use 'Raimondi/delimitMate'
       -- 注释代码
       use 'tpope/vim-commentary'
       -- 代码提示与补全
@@ -74,7 +75,10 @@ packer.startup(
       use 'rafamadriz/friendly-snippets'
       -- lspkind
       use 'onsails/lspkind-nvim'
-      use 'lukas-reineke/lsp-format.nvim'
+      -- 代码格式化
+      -- use 'lukas-reineke/lsp-format.nvim'
+      use 'mhartington/formatter.nvim'
+      -- use 'jose-elias-alvarez/null-ls.nvim'
       -- clangd enhance
       -- use 'p00f/clangd_extensions.nvim'
 

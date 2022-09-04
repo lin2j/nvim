@@ -10,6 +10,7 @@ require('plugin-config.nvim-tree')
 require('plugin-config.aerial')
 require('plugin-config.telescope')
 require('plugin-config.mason')
+--require('plugin-config.formatter')
 --require('plugin-config.clangd-extensions')
 
 -- 代码提示与补全

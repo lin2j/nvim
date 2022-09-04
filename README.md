@@ -8,24 +8,37 @@ neovim version ≥ 0.8.0
 
 ---
 
-[[toc]]
 
+<!-- vim-markdown-toc GFM -->
+
+* [安装前](#安装前)
+* [安装后](#安装后)
+* [所有的插件](#所有的插件)
+* [插件快捷键](#插件快捷键)
+    * [注释](#注释)
+    * [文件目录浏览](#文件目录浏览)
+    * [文件搜索](#文件搜索)
+    * [代码大纲（outline）](#代码大纲outline)
+    * [LSP 回调函数](#lsp-回调函数)
+    * [nvim-cmp 自动补全](#nvim-cmp-自动补全)
+
+<!-- vim-markdown-toc -->
 
 # 安装前
-- [ ] 安装 nerd-fonts (部分插件使用了文字图标，基于该字体)
+- [x] 安装 nerd-fonts (部分插件使用了文字图标，基于该字体)
 
-- [ ] zip 解压软件
+- [x] zip 解压软件
     - Unix 系统: unzip, tar, gzip
     - Windows 系统: 7zip, peazip, archiver, winzip, WinRAR
 
-- [ ] 如果需要格式化代码，可能需要上网找到对应编程语言的格式化工具，比如
+- [x] 如果需要格式化代码，可能需要上网找到对应编程语言的格式化工具，比如
     - stylua
     - clang-format
 
 - [ ] 你可能需要安装 `rg` 程序以用来搜索项目中的关键词
 
 # 安装后
-- [ ] `MarkdownPreview` 命令如果不能执行，可能是 markdown-preview 插件没有安装好了，安装需要用到 npm
+- [x] `MarkdownPreview` 命令如果不能执行，可能是 markdown-preview 插件没有安装好了，安装需要用到 npm
  或者 yank 命令
 
 # 所有的插件

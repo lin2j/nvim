@@ -113,6 +113,8 @@ packer.startup(
         cmd = { "MarkdownPreview" },
         requires = { "zhaozg/vim-diagram", "aklt/plantuml-syntax" },
       }
+      -- markdown 目录生成
+      use 'mzlogin/vim-markdown-toc'
 
       if packer_bootstrap then
         packer.sync()

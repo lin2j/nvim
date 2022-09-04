@@ -40,8 +40,6 @@ packer.startup(
         'nvim-lualine/lualine.nvim',
         requires = { 'kyazdani42/nvim-web-devicons', opt = true }
       }
-      use 'kyazdani42/nvim-web-devicons'
-      -- use 'lambdalisue/nerdfont.vim'
 
       -- tab 文件列表
       use {
@@ -50,7 +48,6 @@ packer.startup(
         requires = 'kyazdani42/nvim-web-devicons'
       }
       -- 彩虹括号
-      -- use 'p00f/nvim-ts-rainbow'
       use 'Raimondi/delimitMate'
       -- 注释代码
       use 'tpope/vim-commentary'
@@ -76,7 +73,7 @@ packer.startup(
       -- lspkind
       use 'onsails/lspkind-nvim'
       -- 代码格式化
-      -- use 'lukas-reineke/lsp-format.nvim'
+-- use 'lukas-reineke/lsp-format.nvim'
       use 'mhartington/formatter.nvim'
       -- use 'jose-elias-alvarez/null-ls.nvim'
       -- clangd enhance

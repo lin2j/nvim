@@ -8,6 +8,12 @@ local opt = {
 local pluginKeys = {}
 local map = vim.api.nvim_set_keymap
 
+-- 代码注释
+map('n', '<C-/>', ':Commentary<CR>', opt)
+map('v', '<C-/>', ':Commentary<CR>', opt)
+map('n', '<D-/>', ':Commentary<CR>', opt)
+map('v', '<D-/>', ':Commentary<CR>', opt)
+
 -- 局部代码格式化
 -- map('n', '<leader>cf', ':Format<CR>', opt)
 -- map('v', '<leader>cf', ':Format<CR>', opt)

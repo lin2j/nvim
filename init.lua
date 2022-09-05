@@ -2,6 +2,7 @@ require("basic")
 require("plugins")
 
 -- 插件的配置
+require('plugin-config.nvim-web-devicons')
 require('plugin-config.alpha')
 require('plugin-config.theme')
 require('plugin-config.lualine')

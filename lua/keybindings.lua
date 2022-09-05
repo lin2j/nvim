@@ -8,6 +8,10 @@ local opt = {
 local pluginKeys = {}
 local map = vim.api.nvim_set_keymap
 
+-- markdown 生成目录
+map('n', '<leader>toc', ':GenTocGFM<CR>', opt)
+map('n', '<leader>mpv', ':MarkdownPreview<CR>', opt)
+
 -- 代码注释
 map('n', '<C-/>', ':Commentary<CR>', opt)
 map('v', '<C-/>', ':Commentary<CR>', opt)

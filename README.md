@@ -28,7 +28,6 @@
 
 ---
 
-
 <!-- vim-markdown-toc GFM -->
 
 * [截图](#截图)
@@ -42,8 +41,11 @@
     * [代码大纲（outline）](#代码大纲outline)
     * [LSP 回调函数](#lsp-回调函数)
     * [nvim-cmp 自动补全](#nvim-cmp-自动补全)
+    * [markdown](#markdown)
+* [不足之处](#不足之处)
 
 <!-- vim-markdown-toc -->
+
 
 # 截图
 ![screenshot](./doc/screenshot.png)
@@ -78,6 +80,7 @@
 - [goolord/alpha-nvim](https://www.github.com/goolord/alpha-nvim) (开始界面)
 - [rmehri01/onenord.nvim](https://www.github.com/rmehri01/onenord.nvim) (主题，亮色主题，我不喜欢暗色的)
 - [iamcco/markdown-preview.nvim](https://www.github.com/iamcco/markdown-preview.nvim) (Markdown 文件预览，需要借助外部浏览器)
+- [mzlogin/vim-markdown-toc](https://www.github.com/mzlogin/vim-markdown-toc) (Markdown 目录自动生成)
 - 代码提示与补全(基于内置 lsp 和 nvim-cmp)
     - [williamboman/mason.nvim](https://www.github.com/williamboman/mason.nvim) (lsp 服务管理)
     - [williamboman/mason-lspconfig.nvim](https://www.github.com/williamboman/mason-lspconfig.nvim) (-)
@@ -187,4 +190,12 @@ Visual 模式下主要用来选中多行代码然后全部注释掉
 
 上一项：I\<Ctrl-p\>
 
+## markdown
 
+在当前位置生成目录：N\<⌴-t-o-c\>
+
+启动 Markdown 预览（需要在 md 文件下才能用）: N\<⌴-m-p-v\>
+
+# 不足之处
+
+- 格式化需要借助外部程序进行格式化

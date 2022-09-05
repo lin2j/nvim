@@ -2,7 +2,7 @@ vim.opt.termguicolors = true
 
 require("bufferline").setup({
   options = {
-    numbers = "buffer_id",
+    -- numbers = "buffer_id",
     close_command = "bdelete! %d",
     right_mouse_command = nil,
     left_mouse_command = "buffer %d",

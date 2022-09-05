@@ -33,6 +33,8 @@ end
 packer.startup(
   {
     function(use)
+      -- 图标
+      use 'kyazdani42/nvim-web-devicons'
       -- 安装插件的位置
       use('wbthomason/packer.nvim')
       -- 状态栏
@@ -59,7 +61,6 @@ packer.startup(
         "williamboman/mason-lspconfig.nvim",
         "neovim/nvim-lspconfig",
       }
-      -- use 'williamboman/nvim-lsp-installer'
       -- nvim-cmp
       use 'hrsh7th/cmp-nvim-lsp' -- { name = nvim_lsp }
       use 'hrsh7th/cmp-buffer' -- { name = 'buffer' },
@@ -73,11 +74,7 @@ packer.startup(
       -- lspkind
       use 'onsails/lspkind-nvim'
       -- 代码格式化
--- use 'lukas-reineke/lsp-format.nvim'
       use 'mhartington/formatter.nvim'
-      -- use 'jose-elias-alvarez/null-ls.nvim'
-      -- clangd enhance
-      -- use 'p00f/clangd_extensions.nvim'
 
       -- 目录树
       use {
@@ -109,7 +106,7 @@ packer.startup(
       use {
         'iamcco/markdown-preview.nvim',
         run = function() vim.fn['mkdp#util#install']() end,
-        ft = {'markdown'},
+        ft = { 'markdown' },
         cmd = { "MarkdownPreview" },
         requires = { "zhaozg/vim-diagram", "aklt/plantuml-syntax" },
       }

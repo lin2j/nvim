@@ -1,16 +1,37 @@
-<h1 align="center">
+<div align="center">
   <img src="https://raw.githubusercontent.com/neovim/neovim.github.io/master/logos/neovim-logo-300x87.png" alt="Neovim">
-</h1>
+</div>
+<p></p>
+<div align="center">
+<p>
+    <a>
+      <img alt="Linux" src="https://img.shields.io/badge/Linux-%23.svg?style=flat-square&logo=linux&color=FCC624&logoColor=black" />
+    </a>
+    <a>
+      <img alt="macOS" src="https://img.shields.io/badge/macOS-%23.svg?style=flat-square&logo=apple&color=000000&logoColor=white" />
+    </a>
+    <a>
+      <img alt="Windows" src="https://img.shields.io/badge/Windows-%23.svg?style=flat-square&logo=windows&color=0078D6&logoColor=white" />
+    </a>
+    <a href="https://github.com/neovim/neovim/releases/tag/stable">
+      <img src="https://img.shields.io/badge/Neovim-0.8.0-blueviolet.svg?style=flat-square&logo=Neovim&logoColor=green" alt="Neovim minimum version"/>
+    </a>
+    <a href="https://github.com/lin2j/nvim/search?l=lua">
+      <img src="https://img.shields.io/github/languages/top/lin2j/nvim" alt="Top languages"/>
+    </a>
+    <a href="https://github.com/lin2j/nvim/blob/master/LICENSE">
+      <img src="https://img.shields.io/github/license/lin2j/nvim?style=flat-square&logo=GNU&label=LICENSE" alt="License"/>
+    </a>
+</p>
+</div>
 
-neovim version ≥ 0.8.0
-
-> 请不要简单复制这份配置文件，至少阅读一下这份 README。
 
 ---
 
 
 <!-- vim-markdown-toc GFM -->
 
+* [截图](#截图)
 * [安装前](#安装前)
 * [安装后](#安装后)
 * [所有的插件](#所有的插件)
@@ -23,6 +44,9 @@ neovim version ≥ 0.8.0
     * [nvim-cmp 自动补全](#nvim-cmp-自动补全)
 
 <!-- vim-markdown-toc -->
+
+# 截图
+![screenshot](./doc/screenshot.png)
 
 # 安装前
 - [x] 安装 nerd-fonts (部分插件使用了文字图标，基于该字体)

@@ -1,6 +1,11 @@
 require("basic")
 require("plugins")
 
+local utils = require('utils')
+vim.g.is_mac = utils.is_mac()
+vim.g.is_win = utils.is_win()
+vim.g.is_unix = utils.is_unix()
+
 -- 插件的配置
 require('plugin-config.nvim-web-devicons')
 require('plugin-config.alpha')

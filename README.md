@@ -42,6 +42,8 @@
     * [LSP 回调函数](#lsp-回调函数)
     * [nvim-cmp 自动补全](#nvim-cmp-自动补全)
     * [markdown](#markdown)
+* [注意点](#注意点)
+    * [im-select](#im-select)
 * [不足之处](#不足之处)
 
 <!-- vim-markdown-toc -->
@@ -63,9 +65,15 @@
 
 - [ ] 你可能需要安装 `rg` 程序以用来搜索项目中的关键词
 
+- [ ] 你可能需要安装 `im-select` 来在 Normal 模式下自动切换为英文输入法，提升体验
+
 # 安装后
 - [x] `MarkdownPreview` 命令如果不能执行，可能是 markdown-preview 插件没有安装好了，安装需要用到 npm
  或者 yank 命令
+
+- [x] 首次进入会自动安装 Packer 插件，安装完成后重启 neovim，执行 :PackerSync 进行插件下载
+
+- [x] 所有插件安装完成后，执行 :MasonInstall 安装需要的 language server 
 
 # 所有的插件
 - [wbthomason/packer.nvim](https://www.github.com/wbthomason/packer.nvim) (插件管理器)
@@ -81,6 +89,7 @@
 - [rmehri01/onenord.nvim](https://www.github.com/rmehri01/onenord.nvim) (主题，亮色主题，我不喜欢暗色的)
 - [iamcco/markdown-preview.nvim](https://www.github.com/iamcco/markdown-preview.nvim) (Markdown 文件预览，需要借助外部浏览器)
 - [mzlogin/vim-markdown-toc](https://www.github.com/mzlogin/vim-markdown-toc) (Markdown 目录自动生成)
+- [brglng/vim-im-select](https://github.com/brglng/vim-im-select) (Normal 下自动切换输入法的配置插件)
 - 代码提示与补全(基于内置 lsp 和 nvim-cmp)
     - [williamboman/mason.nvim](https://www.github.com/williamboman/mason.nvim) (lsp 服务管理)
     - [williamboman/mason-lspconfig.nvim](https://www.github.com/williamboman/mason-lspconfig.nvim) (-)
@@ -195,6 +204,13 @@ Visual 模式下主要用来选中多行代码然后全部注释掉
 在当前位置生成目录：N\<⌴-t-o-c\>
 
 启动 Markdown 预览（需要在 md 文件下才能用）: N\<⌴-m-p-v\>
+
+# 注意点
+
+## im-select
+
+这个插件需要依赖本地安装 `im-select` 程序，安装之后需要到 `lua/plugin-config/im-select.lua` 文件中，
+更改你自己系统平台的配置路径。
 
 # 不足之处
 

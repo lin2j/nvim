@@ -113,6 +113,9 @@ packer.startup(
       -- markdown 目录生成
       use 'mzlogin/vim-markdown-toc'
 
+      -- input method setting
+      use 'brglng/vim-im-select'
+
       if packer_bootstrap then
         packer.sync()
       end

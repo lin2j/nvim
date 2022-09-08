@@ -14,6 +14,7 @@ require('plugin-config.mason')
 --require('plugin-config.formatter')
 --require('plugin-config.clangd-extensions')
 require('plugin-config.markdown')
+require('plugin-config.im-select')
 
 -- 代码提示与补全
 require('lsp.setup')

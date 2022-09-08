@@ -56,4 +56,19 @@ function M.add_pack(name)
   return status
 end
 
+function M.is_mac()
+  	local has = vim.fn.has
+    return (has("mac") or has("macunix") or has("gui_macvim") or vim.fn.system("uname"):find("^darwin") ~= nil)
+end
+
+function M.is_win()
+    local has = vim.fn.has
+    return (has("win32") or has("win64") or has("win95") or has("win16"))
+end
+
+function M.is_unix()
+    local has = vim.fn.has
+    return has('unix')
+end
+
 return M

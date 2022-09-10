@@ -70,3 +70,7 @@ vim.o.pumheight = 10
 -- vim.o.showtabline = 2
 -- 使用增强状态栏后不需要 vim 的模式提示
 vim.o.showmode = false
+-- 使用系统剪切板
+vim.cmd([[
+  set clipboard^=unnamed,unnamedplus
+]])

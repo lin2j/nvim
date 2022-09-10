@@ -14,6 +14,7 @@ elseif theme == 'ayu' then
   })
 
   ayu.colorscheme()
+
 elseif theme == 'onenord' then
   require('onenord').setup({
     theme = 'light',
@@ -34,6 +35,14 @@ elseif theme == 'onenord' then
       -- 光标所在行在高亮
       active = '#F2F3F5',
     },
+    custom_highlights = {
+      -- used for highlighting "text" references
+      LspReferenceText = { style = "NONE", bg = '#E4E4FF'},
+      -- used for highlighting "read" references
+      LspReferenceRead = { style = "NONE", bg = '#E4E4FF'},
+      -- used for highlighting "write" references
+      LspReferenceWrite = { style = "NONE", bg = '#E4E4FF'},
+    }
   })
 elseif theme == 'none' then
 end

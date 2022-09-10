@@ -116,6 +116,9 @@ packer.startup(
       -- input method setting
       use 'brglng/vim-im-select'
 
+      -- color
+      use 'norcalli/nvim-colorizer.lua'
+
       if packer_bootstrap then
         packer.sync()
       end

@@ -26,6 +26,14 @@ elseif theme == 'onenord' then
       variables = "NONE",
       diagnostics = "underline",
     },
+    custom_colors = {
+      -- 背景颜色
+      bg = '#FAFBFC',
+      -- 选中文本的背景色
+      highlight = '#C0D8F0',
+      -- 光标所在行在高亮
+      active = '#F2F3F5',
+    },
   })
 elseif theme == 'none' then
 end

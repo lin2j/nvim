@@ -20,6 +20,7 @@ require('plugin-config.mason')
 --require('plugin-config.clangd-extensions')
 require('plugin-config.markdown')
 require('plugin-config.im-select')
+require('plugin-config.colorizer')
 
 -- 代码提示与补全
 require('lsp.setup')

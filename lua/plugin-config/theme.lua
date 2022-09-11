@@ -35,6 +35,7 @@ elseif theme == 'onenord' then
       -- 光标所在行在高亮
       active = '#F2F3F5',
     },
+    -- 高亮变量及其所在位置 
     custom_highlights = {
       -- used for highlighting "text" references
       LspReferenceText = { style = "NONE", bg = '#E4E4FF'},

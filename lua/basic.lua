@@ -73,4 +73,7 @@ vim.o.showmode = false
 -- 使用系统剪切板
 vim.cmd([[
   set clipboard^=unnamed,unnamedplus
+  inoremap <Space> <Space><C-g>u
+  inoremap , ,<C-g>u
 ]])
+

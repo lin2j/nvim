@@ -21,6 +21,7 @@ require('plugin-config.mason')
 require('plugin-config.markdown')
 require('plugin-config.im-select')
 require('plugin-config.colorizer')
+require('plugin-config.visual-multi')
 
 -- 代码提示与补全
 require('lsp.setup')

@@ -119,6 +119,9 @@ packer.startup(
       -- color
       use 'norcalli/nvim-colorizer.lua'
 
+      -- multi cursor
+      use 'mg979/vim-visual-multi'
+
       if packer_bootstrap then
         packer.sync()
       end

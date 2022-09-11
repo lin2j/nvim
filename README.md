@@ -30,36 +30,46 @@
 
 <!-- vim-markdown-toc GFM -->
 
-* [截图](#截图)
-* [安装前](#安装前)
-* [安装后](#安装后)
-* [所有的插件](#所有的插件)
-* [插件快捷键](#插件快捷键)
-    * [注释](#注释)
-    * [文件目录浏览](#文件目录浏览)
-    * [文件搜索](#文件搜索)
-    * [代码大纲（outline）](#代码大纲outline)
-    * [LSP 回调函数](#lsp-回调函数)
-    * [nvim-cmp 自动补全](#nvim-cmp-自动补全)
-    * [markdown](#markdown)
-* [注意点](#注意点)
-    * [im-select](#im-select)
-* [不足之处](#不足之处)
+* [☀️  手动操作和外部工具依赖](#--手动操作和外部工具依赖)
+* [🪐 所有的插件](#-所有的插件)
+* [⚡️ 插件快捷键](#-插件快捷键)
+  * [注释](#注释)
+  * [文件目录浏览](#文件目录浏览)
+  * [文件搜索](#文件搜索)
+  * [代码大纲（outline）](#代码大纲outline)
+  * [LSP 回调函数](#lsp-回调函数)
+  * [nvim-cmp 自动补全](#nvim-cmp-自动补全)
+  * [markdown](#markdown)
+  * [多光标操作](#多光标操作)
+* [🌟 注意点](#-注意点)
+  * [im-select](#im-select)
+* [🌧 不足之处](#-不足之处)
+* [📃 协议](#-协议)
 
 <!-- vim-markdown-toc -->
 
 
-# 截图
 ![screenshot](./doc/screenshot.png)
 
-# 安装前
+# ☀️  手动操作和外部工具依赖
+
+> - [x] 表示必须
+>
+> - [ ] 表示可选
+
 - [x] 安装 nerd-fonts (部分插件使用了文字图标，基于该字体)
 
 - [x] zip 解压软件
     - Unix 系统: unzip, tar, gzip
     - Windows 系统: 7zip, peazip, archiver, winzip, WinRAR
 
-- [x] 如果需要格式化代码，可能需要上网找到对应编程语言的格式化工具，比如
+- [x] `MarkdownPreview` 命令如果不能执行，可能是 markdown-preview 插件没有安装好了，安装需要用到 npm 或者 yank 命令
+
+- [x] 首次进入会自动安装 Packer 插件，安装完成后重启 neovim，执行 :PackerSync 进行插件下载
+
+- [x] 所有插件安装完成后，执行 :MasonInstall 安装需要的 language server 
+
+- [ ] 如果需要格式化代码，可能需要上网找到对应编程语言的格式化工具，比如
     - stylua
     - clang-format
 
@@ -67,15 +77,7 @@
 
 - [ ] 你可能需要安装 `im-select` 来在 Normal 模式下自动切换为英文输入法，提升体验
 
-# 安装后
-- [x] `MarkdownPreview` 命令如果不能执行，可能是 markdown-preview 插件没有安装好了，安装需要用到 npm
- 或者 yank 命令
-
-- [x] 首次进入会自动安装 Packer 插件，安装完成后重启 neovim，执行 :PackerSync 进行插件下载
-
-- [x] 所有插件安装完成后，执行 :MasonInstall 安装需要的 language server 
-
-# 所有的插件
+# 🪐 所有的插件
 - [wbthomason/packer.nvim](https://www.github.com/wbthomason/packer.nvim) (插件管理器)
 - [vim-lualine/lualine.nvim](https://www.github.com/vim-lualine/lualine.nvim) (状态栏)
 - [akinsho/bufferline.nvi](https://www.github.com/akinsho/bufferline.nvim) (顶部文件 tab 列表管理)
@@ -90,6 +92,7 @@
 - [iamcco/markdown-preview.nvim](https://www.github.com/iamcco/markdown-preview.nvim) (Markdown 文件预览，需要借助外部浏览器)
 - [mzlogin/vim-markdown-toc](https://www.github.com/mzlogin/vim-markdown-toc) (Markdown 目录自动生成)
 - [brglng/vim-im-select](https://github.com/brglng/vim-im-select) (Normal 下自动切换输入法的配置插件)
+- [mg979/vim-visual-multi](https://github.com/mg979/vim-visual-multi) (多光标操作)
 - 代码提示与补全(基于内置 lsp 和 nvim-cmp)
     - [williamboman/mason.nvim](https://www.github.com/williamboman/mason.nvim) (lsp 服务管理)
     - [williamboman/mason-lspconfig.nvim](https://www.github.com/williamboman/mason-lspconfig.nvim) (-)
@@ -104,7 +107,7 @@
     - [rafamadriz/friendly-snippets](https://www.github.com/rafamadriz/friendly-snippets) (-)
     - [onsails/lspkind-nvim](https://www.github.com/onsails/lspkind-nvim) (-)
 
-# 插件快捷键
+# ⚡️ 插件快捷键
 > 空格用 ⌴ 表示
 >
 > N 表示在 Normal 下的快捷键，V 表示在 Visual 模式，I 表示 Insert 模式
@@ -205,13 +208,25 @@ Visual 模式下主要用来选中多行代码然后全部注释掉
 
 启动 Markdown 预览（需要在 md 文件下才能用）: N\<⌴-m-p-v\>
 
-# 注意点
+## 多光标操作
+
+具体使用建议看视频，[B站教程](https://www.bilibili.com/video/BV1Gy4y1q7Co/?vd_source=f587e25bd8b252e7c424ed1569b8fcd1)
+
+竖直向下选择：N\<Ctrl-j\>
+
+竖直向上选择：N\<Ctrl-k\>
+
+# 🌟 注意点
 
 ## im-select
 
 这个插件需要依赖本地安装 `im-select` 程序，安装之后需要到 `lua/plugin-config/im-select.lua` 文件中，
 更改你自己系统平台的配置路径。
 
-# 不足之处
+# 🌧 不足之处
 
 - 格式化需要借助外部程序进行格式化
+
+# 📃 协议
+
+[**MIT**](LICENSE)

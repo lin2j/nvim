@@ -75,6 +75,14 @@ packer.startup(
       use 'onsails/lspkind-nvim'
       -- 代码格式化
       use 'mhartington/formatter.nvim'
+      -- lsp 查找优化
+      use {
+        'ojroques/nvim-lspfuzzy',
+        requires = {
+          {'junegunn/fzf'},
+          {'junegunn/fzf.vim'},  -- to enable preview (optional)
+        },
+      }
 
       -- 目录树
       use {

@@ -23,6 +23,7 @@ require('plugin-config.im-select')
 require('plugin-config.colorizer')
 require('plugin-config.visual-multi')
 
--- 代码提示与补全
+-- lsp 功能强化
 require('lsp.setup')
 require('lsp.nvim-cmp')
+require('lsp.lspfuzzy')

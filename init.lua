@@ -22,6 +22,7 @@ require('plugin-config.markdown')
 require('plugin-config.im-select')
 require('plugin-config.colorizer')
 require('plugin-config.visual-multi')
+require('plugin-config.auto-save')
 
 -- lsp 功能强化
 require('lsp.setup')

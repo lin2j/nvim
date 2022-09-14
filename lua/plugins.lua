@@ -130,6 +130,10 @@ packer.startup(
       -- multi cursor
       use 'mg979/vim-visual-multi'
 
+
+      -- auto save
+      use 'Pocco81/auto-save.nvim'
+
       if packer_bootstrap then
         packer.sync()
       end

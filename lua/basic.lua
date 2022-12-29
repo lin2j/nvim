@@ -1,9 +1,9 @@
 -- utf8
 vim.g.encoding = "UTF-8"
 vim.o.fileencoding = "utf-8"
--- jkhl 移动时光标周围保留 8 行
-vim.o.scrolloff = 8
-vim.o.sidescrolloff = 8
+-- jkhl 移动时光标周围保留 10 行
+vim.o.scrolloff = 10
+vim.o.sidescrolloff = 10
 -- 使用相对行号
 vim.wo.number = true
 -- vim.wo.relativenumber = true
@@ -76,4 +76,5 @@ vim.cmd([[
   inoremap <Space> <Space><C-g>u
   inoremap , ,<C-g>u
 ]])
+
 

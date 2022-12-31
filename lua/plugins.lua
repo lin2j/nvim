@@ -108,6 +108,7 @@ packer.startup(
         'Shatur/neovim-ayu',
         'MetriC-DT/balance-theme.nvim',
         'rmehri01/onenord.nvim',
+        'folke/tokyonight.nvim',
       }
 
       -- markdown

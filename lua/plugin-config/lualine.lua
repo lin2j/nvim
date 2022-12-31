@@ -7,7 +7,7 @@ local nvim_theme = require('plugin-config.theme')
 -- Color table for highlights
 -- stylua: ignore
 local colors = {
-  bg       = '#202328',
+  bg       = '#202334',
   fg       = '#bbc2cf',
   yellow   = '#ECBE7B',
   cyan     = '#008080',

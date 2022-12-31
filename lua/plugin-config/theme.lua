@@ -1,6 +1,6 @@
--- ayu、balance、onenord or none
+-- ayu、balance、onenord、tokyonight or none
 -- and builtin
-local theme = 'onenord'
+local theme = 'tokyonight'
 
 if theme == 'balance' then
   require('balance').setup()
@@ -45,6 +45,8 @@ elseif theme == 'onenord' then
       LspReferenceWrite = { style = "NONE", bg = '#E4E4FF'},
     }
   })
+elseif theme == 'tokyonight' then
+  vim.cmd[[colorscheme tokyonight]]
 elseif theme == 'none' then
 end
 

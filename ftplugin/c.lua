@@ -6,3 +6,4 @@ vim.o.shiftwidth = 8
 vim.bo.tabstop = 8
 vim.o.softtabstop = 8
 vim.o.shiftround = true
+

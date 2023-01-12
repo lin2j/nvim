@@ -105,8 +105,6 @@ packer.startup(
 
       -- themes
       use {
-        'Shatur/neovim-ayu',
-        'MetriC-DT/balance-theme.nvim',
         'rmehri01/onenord.nvim',
         'folke/tokyonight.nvim',
       }
@@ -125,12 +123,8 @@ packer.startup(
       -- input method setting
       use 'brglng/vim-im-select'
 
-      -- color
-      use 'norcalli/nvim-colorizer.lua'
-
       -- multi cursor
       use 'mg979/vim-visual-multi'
-
 
       -- auto save
       use 'Pocco81/auto-save.nvim'

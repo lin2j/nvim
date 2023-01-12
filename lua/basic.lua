@@ -29,8 +29,8 @@ vim.o.smartindent = true
 -- 边输入边搜索
 vim.o.hlsearch = false
 vim.o.incsearch = true
--- 命令行高为 2，提供足够的显示空间
-vim.o.cmdheight = 2
+-- 命令行高为 1，提供足够的显示空间
+vim.o.cmdheight = 1
 -- 当文件被外部程序修改时，自动加载
 vim.o.autoread = true
 vim.bo.autoread = true

@@ -1,21 +1,8 @@
--- ayu、balance、onenord、tokyonight or none
+-- onenord、tokyonight or none
 -- and builtin
 local theme = 'tokyonight'
 
-if theme == 'balance' then
-  require('balance').setup()
-
-elseif theme == 'ayu' then
-  local ayu = require('ayu')
-
-  ayu.setup({
-    mirage = true,
-    overrides = {},
-  })
-
-  ayu.colorscheme()
-
-elseif theme == 'onenord' then
+if theme == 'onenord' then
   require('onenord').setup({
     theme = 'light',
     -- Style that is applied to various groups: see `highlight-args` for options

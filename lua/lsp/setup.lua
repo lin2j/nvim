@@ -29,8 +29,6 @@ local on_attach = function(client, bufnr)
 
   -- 绑定快捷键
   require('keybindings').maplsp(buf_set_keymap)
-  -- 函数变量列表
-  require('aerial').on_attach(client, bufnr)
 end
 
 local lsp_flags = {

@@ -19,7 +19,7 @@ require("aerial").setup({
     -- max_width = {40, 0.2} means "the lesser of 40 columns or 20% of total"
     max_width = { 40, 0.2 },
     width = nil,
-    min_width = 10,
+    min_width = 32,
 
     -- Enum: prefer_right, prefer_left, right, left, float
     -- Determines the default direction to open the aerial window. The 'prefer'
@@ -151,11 +151,7 @@ require("aerial").setup({
 
   -- Call this function when aerial attaches to a buffer.
   -- Useful for setting keymaps. Takes a single `bufnr` argument.
-  on_attach = function(bufnr)
-    local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
-
-    require('keybindings').mapaerial(buf_set_keymap)
-  end,
+  on_attach = function(bufnr) end,
 
   -- Call this function when aerial first sets symbols on a buffer.
   -- Takes a single `bufnr` argument.

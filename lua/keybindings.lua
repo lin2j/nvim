@@ -18,10 +18,6 @@ map('v', '<C-/>', ':Commentary<CR>', opt)
 map('n', '<D-/>', ':Commentary<CR>', opt)
 map('v', '<D-/>', ':Commentary<CR>', opt)
 
--- 局部代码格式化
--- map('n', '<leader>cf', ':Format<CR>', opt)
--- map('v', '<leader>cf', ':Format<CR>', opt)
-
 -- Telescope
 -- map("n", "<C-p>", ":Telescope find_files<CR>", opt)
 map("n", "<leader>fm", ":Telescope live_grep<CR>", opt)
@@ -74,16 +70,11 @@ pluginKeys.nvimTreeList = {
 }
 
 -- aerial 函数/类列表快捷键
-pluginKeys.mapaerial = function(mapbuf)
-  -- Toggle the aerial window with <leader>a
-  mapbuf('n', '<leader>a', '<cmd>AerialToggle!<CR>', opt)
-  -- Jump forwards/backwards with '{' and '}'
-  mapbuf('n', '{', '<cmd>AerialPrev<CR>', opt)
-  mapbuf('n', '}', '<cmd>AerialNext<CR>', opt)
-  -- Jump up the tree with '[[' or ']]'
-  mapbuf('n', '[[', '<cmd>AerialPrevUp<CR>', opt)
-  mapbuf('n', ']]', '<cmd>AerialNextUp<CR>', opt)
-end
+vim.keymap.set('n', '<leader>a', '<cmd>AerialToggle!<CR>')
+vim.keymap.set('n', '{', '<cmd>AerialPrev<CR>')
+vim.keymap.set('n', '}', '<cmd>AerialNext<CR>')
+vim.keymap.set('n', '[[', '<cmd>AerialPrevUp<CR>')
+vim.keymap.set('n', ']]', '<cmd>AerialNextUp<CR>')
 
 -- lsp 回调函数快捷键设置
 pluginKeys.maplsp = function(mapbuf)
@@ -104,14 +95,7 @@ pluginKeys.maplsp = function(mapbuf)
   mapbuf('n', 'go', '<cmd>lua vim.diagnostic.open_float()<CR>', opt)
   mapbuf('n', 'gp', '<cmd>lua vim.diagnostic.goto_prev()<CR>', opt)
   mapbuf('n', 'gn', '<cmd>lua vim.diagnostic.goto_next()<CR>', opt)
-  -- mapbuf('n', '<leader>q', '<cmd>lua vim.diagnostic.setloclist()<CR>', opt)
-  -- leader + =
   mapbuf('n', '<leader>=', '<cmd>lua vim.lsp.buf.formatting()<CR>', opt)
-  -- mapbuf('n', '<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opt)
-  -- mapbuf('n', '<space>wa', '<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>', opt)
-  -- mapbuf('n', '<space>wr', '<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>', opt)
-  -- mapbuf('n', '<space>wl', '<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>', opt)
-  -- mapbuf('n', '<space>D', '<cmd>lua vim.lsp.buf.type_definition()<CR>', opt)
 end
 
 

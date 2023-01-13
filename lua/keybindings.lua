@@ -76,6 +76,11 @@ vim.keymap.set('n', '}', '<cmd>AerialNext<CR>')
 vim.keymap.set('n', '[[', '<cmd>AerialPrevUp<CR>')
 vim.keymap.set('n', ']]', '<cmd>AerialNextUp<CR>')
 
+-- 浮动终端快捷键
+vim.keymap.set('n', '<leader>ftn', '<cmd>FloatermNew --autoclose=1<CR>')
+vim.keymap.set('n', '<leader>0', '<cmd>FloatermShow<CR>')
+vim.keymap.set('n', '<leader>9', '<C-w>o')
+
 -- lsp 回调函数快捷键设置
 pluginKeys.maplsp = function(mapbuf)
   -- rename

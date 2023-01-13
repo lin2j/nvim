@@ -126,6 +126,9 @@ packer.startup(
       -- auto save
       use 'Pocco81/auto-save.nvim'
 
+      -- 浮动窗口
+      use 'voldikss/vim-floaterm'
+
       if packer_bootstrap then
         packer.sync()
       end

@@ -120,9 +120,6 @@ packer.startup(
       -- markdown 目录生成
       use 'mzlogin/vim-markdown-toc'
 
-      -- input method setting
-      use 'brglng/vim-im-select'
-
       -- multi cursor
       use 'mg979/vim-visual-multi'
 

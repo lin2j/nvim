@@ -142,6 +142,7 @@ packer.startup(
           "rcarriga/nvim-notify",
           }
       })
+      use 'johnfrankmorgan/whitespace.nvim'
 
 -- plugin region end
 

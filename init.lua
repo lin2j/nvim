@@ -19,7 +19,6 @@ require('plugin-config.markdown')
 require('plugin-config.visual-multi')
 require('plugin-config.auto-save')
 require('plugin-config.delimit-mate')
-require('plugin-config.whitespace')
 
 -- lsp 功能强化
 require('lsp.setup')

@@ -81,9 +81,6 @@ vim.keymap.set('n', '<leader>ftn', '<cmd>FloatermNew --autoclose=1<CR>')
 vim.keymap.set('n', '<leader>0', '<cmd>FloatermShow<CR>')
 vim.keymap.set('n', '<leader>9', '<C-w>o')
 
--- 删除行为空格
-vim.keymap.set('n', '<leader>fw', require('whitespace-nvim').trim)
-
 -- lsp 回调函数快捷键设置
 pluginKeys.maplsp = function(mapbuf)
   -- rename

@@ -143,6 +143,9 @@ packer.startup(
           }
       })
 
+      -- git 增强
+      use 'lewis6991/gitsigns.nvim'
+
 -- plugin region end
 
       if packer_bootstrap then

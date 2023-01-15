@@ -13,7 +13,7 @@ require('noice').setup({
       cmdline = { pattern = "^:", icon = "", lang = "vim" },
       search_down = { kind = "search", pattern = "^/", icon = "", lang = "regex" },
       search_up = { kind = "search", pattern = "^%?", icon = " ", lang = "regex" },
-      filter = { pattern = "^:%s*!", icon = "$", lang = "bash" },
+      bash = { pattern = "^:%s*!", icon = "$", lang = "bash" },
       lua = { pattern = "^:%s*lua%s+", icon = "", lang = "lua" },
       help = { pattern = "^:%s*he?l?p?%s+", icon = "" },
       input = {}, -- Used by input()
@@ -97,7 +97,7 @@ require('noice').setup({
   },
   lsp = {
     progress = {
-      enabled = true,
+      enabled = false,
       -- Lsp Progress is formatted using the builtins for lsp_progress. See config.format.builtin
       -- See the section on formatting for more details on how to customize.
       --- @type NoiceFormat|string

@@ -77,9 +77,9 @@ vim.keymap.set('n', '[[', '<cmd>AerialPrevUp<CR>')
 vim.keymap.set('n', ']]', '<cmd>AerialNextUp<CR>')
 
 -- 浮动终端快捷键
-vim.keymap.set('n', '<leader>ftn', '<cmd>FloatermNew --autoclose=1<CR>')
-vim.keymap.set('n', '<leader>0', '<cmd>FloatermShow<CR>')
-vim.keymap.set('n', '<leader>9', '<C-w>o')
+-- vim.keymap.set('n', '<leader>ftn', '<cmd>FloatermNew --autoclose=1<CR>')
+-- vim.keymap.set('n', '<leader>0', '<cmd>FloatermShow<CR>')
+-- vim.keymap.set('n', '<leader>9', '<C-w>o')
 
 -- buffer 跳转快捷键
 vim.keymap.set('n', '<leader>bn', '<cmd>bn<CR>')

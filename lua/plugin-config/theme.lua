@@ -33,7 +33,7 @@ if theme == 'onenord' then
     }
   })
 elseif theme == 'tokyonight' then
-  vim.cmd[[colorscheme tokyonight]]
+  vim.cmd[[colorscheme tokyonight-moon]]
 elseif theme == 'none' then
 end
 

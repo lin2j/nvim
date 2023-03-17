@@ -6,6 +6,7 @@ local lsp_config = require('lspconfig')
 local servers = {
   sumneko_lua = require('lsp.config.lua'), -- /lua/lsp/lua.lua
   clangd = require('lsp.config.c'),
+  pyright = require('lsp.config.python')
 }
 
 -- 高亮某个变量及其分布位置

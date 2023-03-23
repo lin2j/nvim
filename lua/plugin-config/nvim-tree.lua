@@ -1,15 +1,11 @@
 -- https://github.com/kyazdani42/nvim-tree.lua
 -- local nvim_tree = require'nvim-tree'
-local status, nvim_tree = pcall(require, "nvim-tree")
-if not status then
-  vim.notify("没有找到 nvim-tree")
-  return
-end
 
 -- 列表操作快捷键
 local list_keys = require("keybindings").nvimTreeList
 
 
+local nvim_tree = require('nvim-tree')
 --这里是升级之后的配置
 nvim_tree.setup({
   -- 隐藏 .文件 和 node_modules 文件夹

@@ -7,11 +7,6 @@ vim.g.is_win = utils.is_win()
 vim.g.is_unix = utils.is_unix()
 
 -- 插件的配置
-require('plugin-config.nvim-web-devicons')
-require('plugin-config.alpha')
-require('plugin-config.lualine')
-require('plugin-config.bufferline')
-require('plugin-config.nvim-tree')
 require('plugin-config.aerial')
 require('plugin-config.telescope')
 require('plugin-config.mason')
@@ -27,6 +22,11 @@ require('lsp.nvim-cmp')
 require('lsp.lspfuzzy')
 
 -- UI 增强
+require('plugin-config.nvim-tree')
+require('plugin-config.nvim-web-devicons')
+require('plugin-config.alpha')
+require('plugin-config.lualine')
+require('plugin-config.bufferline')
 require('plugin-config.theme')
 require('plugin-config.dressing')
 require('plugin-config.noice')

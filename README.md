@@ -1,7 +1,7 @@
 <div align="center">
   <img src="https://raw.githubusercontent.com/neovim/neovim.github.io/master/logos/neovim-logo-300x87.png" alt="Neovim">
 </div>
-<p></p>
+<p>个人配置，用在别的机器可能会有些奇奇怪怪的问题，建议还是自己从头配置</p>
 <div align="center">
 <p>
     <a>
@@ -33,16 +33,17 @@
 * [☀️  手动操作和外部工具依赖](#--手动操作和外部工具依赖)
 * [🪐 所有的插件](#-所有的插件)
 * [⚡️ 插件快捷键](#-插件快捷键)
-  * [注释](#注释)
-  * [文件目录浏览](#文件目录浏览)
-  * [文件搜索](#文件搜索)
-  * [代码大纲（outline）](#代码大纲outline)
-  * [LSP 回调函数](#lsp-回调函数)
-  * [nvim-cmp 自动补全](#nvim-cmp-自动补全)
-  * [markdown](#markdown)
-  * [多光标操作](#多光标操作)
+    * [注释](#注释)
+    * [文件目录浏览](#文件目录浏览)
+    * [文件搜索](#文件搜索)
+    * [代码大纲（outline）](#代码大纲outline)
+    * [LSP 回调函数](#lsp-回调函数)
+    * [nvim-cmp 自动补全](#nvim-cmp-自动补全)
+    * [markdown](#markdown)
+    * [多光标操作](#多光标操作)
 * [🌟 注意点](#-注意点)
 * [🌧 不足之处](#-不足之处)
+* [🌈 Q&A](#-qa)
 * [📃 协议](#-协议)
 
 <!-- vim-markdown-toc -->
@@ -58,6 +59,8 @@
 
 - [x] 安装 nerd-fonts (部分插件使用了文字图标，基于该字体)
 
+- [x] 安装 tree-sitter，luajit，node(≥14)，npm
+
 - [x] zip 解压软件
     - Unix 系统: unzip, tar, gzip
     - Windows 系统: 7zip, peazip, archiver, winzip, WinRAR
@@ -68,7 +71,9 @@
 
 - [x] 所有插件安装完成后，执行 :MasonInstall 安装需要的 language server 
 
-- [ ] 你可能需要安装 `rg` 程序以用来搜索项目中的关键词
+- [ ] 你可能需要安装 `ripgrep` 程序以用来搜索项目中的关键词
+
+**如果有什么问题，可以尝试运行 :checkhealth 命令查看并解决**
 
 # 🪐 所有的插件
 - [wbthomason/packer.nvim](https://www.github.com/wbthomason/packer.nvim) (插件管理器)
@@ -213,6 +218,13 @@ Visual 模式下主要用来选中多行代码然后全部注释掉
 # 🌧 不足之处
 
 - 格式化需要借助外部程序进行格式化
+
+# 🌈 Q&A
+
+1. tree-sitter 高亮报错
+
+使用 `:TSUpdate <lang>` 命令更新对应变成语言的 ts，比如 `TSUpdate lua`
+
 
 # 📃 协议
 

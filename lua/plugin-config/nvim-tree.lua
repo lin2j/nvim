@@ -41,8 +41,8 @@ nvim_tree.setup({
     hide_root_folder = true,
     -- 自定义列表中快捷键
     mappings = {
-      custom_only = true
-      --[[ list = list_keys, ]]
+      custom_only = true,
+      list = list_keys,
     },
     -- 不显示行数
     number = false,
